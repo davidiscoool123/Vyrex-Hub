@@ -1,0 +1,50 @@
+  local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+    local Window = Library.CreateLib("Vyrex Hub (Bedwars)", "Ocean")
+    
+    -- Tab
+    
+    local Tab1 = Window:NewTab("Bedwars")
+    local Tab1Section = Tab1:NewSection("Bedwars")
+    
+    local Tab2 = Window:NewTab("Credits")
+    local Tab2Section = Tab2:NewSection("Credits")
+    
+    -- Buttons
+    Tab1Section:NewButton("Vape V4 Loader", "Loads Vape V4 Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    end)
+
+    Tab1Section:NewButton("Softbed Loader", "Loads Softbed Hack For Bedwars", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/ELCkygpv", true))()
+        end)
+    
+    Tab1Section:NewButton("Keyboard Script", "Opens Keyboard", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/kC3dAMvt"))()
+    end)
+    
+    Tab1Section:NewButton("Inf Jumps", "Allows You To Jump Infinitely", function()
+    local InfiniteJumpEnabled = true
+    game:GetService("UserInputService").JumpRequest:connect(function()
+        if InfiniteJumpEnabled then
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+        end
+    end)
+    end)
+    
+    Tab1Section:NewButton("Infinite Yield (Admin)", "Loads Infinite Yield Admin", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+    
+    Tab2Section:NewButton("Credits", "Credits", function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Vyrex Hub";
+        Text = "Made By Vyrex Master#0727";
+        Duration = 60;
+    })
+    wait(1)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Enjoy";
+        Text = "Thanks For Using Vyrex Hub!";
+        Duration = 60;
+    })
+    end)
